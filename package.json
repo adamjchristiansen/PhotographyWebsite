@@ -1,0 +1,16 @@
+{
+  "name": "Meadowlark",
+  "version": "1.0.0",
+  "description": "Example Node and Express web app",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.12.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node ./bin/www",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
