@@ -1,25 +1,37 @@
 var express = require('express');
+var path = require('path');
 var app = express();
 
-// app.set('port', process.env.PORT || 3000);
+app.use(express.static(path.join(__dirname, 'public')));
+
+var fortunes = [ 
+    "conquer your fears or they will conquer you", 
+    "do not fear what you don't know", 
+    "you will win a million dollars",
+    "you will have a scarry dream tonight"
+    ];
+
+app.get('/', function(req, res) {
+    res.render('home');
+});
+
+app.get('/about', function(req, res) {
+    var randomFortune = fortunes[Math.floor(Math.random() * fortunes.length)];
+    res.render('about', { fortune: randomFortune });
+});
 
 //custom 404 page
 app.use(function(req, res){
-	res.type('text/plain');
 	res.status(404);
-	res.send('404 - Not Found');
+    res.render('404');
+
 });
 
 //custom 500 page
 app.use(function(err, req, res, next){
 	console.error(err.stack);
-	res.type('text/plain');
 	res.status(500);
-	res.send('500 - Server Error');
+    res.render('500');
 });
-
-// app.listen(app.get('port'), function() {
-// 	console.log('Express started on http://localhost:' + app.get('port') + '; press ctrl-c to terminate');
-// });
 
 module.exports = app;

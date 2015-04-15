@@ -1,6 +1,11 @@
 var app = require('../app.js');
 
 app.set('port', process.env.PORT || 3000);
+
+var handlebars = require('express3-handlebars').create({ defaultLayout: 'main' });
+app.engine('handlebars', handlebars.engine);
+app.set('view engine', 'handlebars');
+
 var server = app.listen(app.get('port'), function() {
 	console.log('Express server listening on port ' + server.address().port);
 });

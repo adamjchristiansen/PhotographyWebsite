@@ -4,7 +4,8 @@
   "description": "Example Node and Express web app",
   "main": "app.js",
   "dependencies": {
-    "express": "^4.12.3"
+    "express": "^4.12.3",
+    "express3-handlebars": "^0.5.2"
   },
   "devDependencies": {},
   "scripts": {
