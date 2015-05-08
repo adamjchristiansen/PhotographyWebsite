@@ -1,12 +1,14 @@
 var express = require('express');
 var path = require('path');
 var fortune = require('./lib/fortune.js');
+var bodyParser = require('body-parser');
 var app = express();
 
+app.use(bodyParser.json());
+// app.use(bodyParser.urlencoded());
 app.use(express.static(path.join(__dirname, 'public')));
 
 function getWeatherData() {
-	console.log("in getWeatherData()");
 	return {
 		locations: [
 			{
@@ -21,10 +23,8 @@ function getWeatherData() {
 }
 
 app.use(function(req, res, next) {
-	console.log("in app.use");
 	if(!res.locals.partials) res.locals.partials = {};
 	res.locals.partials.weather = getWeatherData();
-	console.log(res.locals.partials.weather);
 	next();
 });
 
