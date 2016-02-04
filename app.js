@@ -1,3 +1,4 @@
+console.log("starting app.js");
 
 var express = require('express');
 var path = require('path');
@@ -125,3 +126,5 @@ app.use(function(err, req, res, next){
 });
 
 module.exports = app;
+
+console.log("ending app.js");
