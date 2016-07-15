@@ -1,119 +1,85 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-	<style>
-		ul {
-			list-style-type: none;
-			margin: 0;
-			padding: 0;
-			overflow: hidden;
-			background-color: #333;
-			position: fixed;
-			top: 0;
-			width: 100%;
-		}
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Photography</title>
+    
+    <link href="Content/bootstrap.min.css" rel="stylesheet" /> 
+    <link href="css/default.css" rel="stylesheet" />
+    <!--<script src="Scripts/jquery-1.9.1.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>-->
+    
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
-		li {
-			float: left;
-		}
-
-		li a, .dropbtn {
-			display: block;
-			color: white;
-			text-align: center;
-			padding: 14px 16px;
-			text-decoration: none;
-		}
-
-		li a:hover, .dropdown:hover .dropbtn{
-			background-color: #111;
-		}
-
-		li.dropdown{
-			display: inline-block;
-		}
-
-		.active {
-			background-color: #4CAF50;
-		}
-
-		.dropdown-content {
-		    display: none;
-		    position: absolute;
-		    background-color: #f9f9f9;
-		    min-width: 160px;
-		    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-		}
-
-		.dropdown-content a {
-		    color: black;
-		    padding: 12px 16px;
-		    text-decoration: none;
-		    display: block;
-		    text-align: left;
-		}
-
-		.dropdown-content a:hover {background-color: #f1f1f1}
-
-		.dropdown:hover .dropdown-content {
-		    display: block;
-		}
-
-	</style>
-
-    <title>Nicole Katheryn Photography</title>
-    {{{_sections.head}}}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<div>
-		<ul>
-			<!-- <li><a href="#home">Home</a></li> -->
 
-			<li><a class = "active" href="/">Home</a></li>
-			<li><a href="/about">About</a></li>
-			<li class="dropdown">
-				<a href="/pricing" class="dropbtn">Pricing</a>
-				<div class="dropdown-content">
-					<a href="#">Link 1</a>
-					<a href="#">Link 2</a>
-					<a href="#">Link 3</a>
-				</div>
-			</li>
-			<li><a href="/"><img src="/images/logo.jpg" alt="Meadowlark Travel Logo"></a></li>
-			<li><a href="/contact">Contact</a></li>
-			<li><a href="/client">Client</a></li>
-			<li><a href="/portfolio">Portfolio</a></li>
-		<ul>
-	</div>
+<header>
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed left-dropdown" data-toggle="collapse"
+                         data-target=".my-navbar-left,.my-navbar-right" aria-expanded="false" id="navbar-button">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
 
-    <!-- <header><img src="/images/logo.jpg" alt="Meadowlark Travel Logo"></header> -->
-   	<div style="padding:20px;margin-top:100px; background-color:#1abc9c; height:1500px;">
-   		{{{body}}}
 
-   		<p>Some text some text some text some text..</p>
-		<p>Some text some text some text some text..</p>
-		<p>Some text some text some text some text..</p>
-		<p>Some text some text some text some text..</p>
-		<p>Some text some text some text some text..</p>
-		<p>Some text some text some text some text..</p>
-		<p>Some text some text some text some text..</p>
-		<p>Some text some text some text some text..</p>
-		<p>Some text some text some text some text..</p>
-		<p>Some text some text some text some text..</p>
-		<p>Some text some text some text some text..</p>
-		<p>Some text some text some text some text..</p>
-		<p>Some text some text some text some text..</p>
-		<p>Some text some text some text some text..</p>
-		<p>Some text some text some text some text..</p>
-		<p>Some text some text some text some text..</p>
-		<p>Some text some text some text some text..</p>
-		<p>Some text some text some text some text..</p>
-		<p>Some text some text some text some text..</p>
-		<p>Some text some text some text some text..</p>
+            <div class="wrapper">
+                <!--class="collapse navbar-collapse"> -->
+                <div class="collapse navbar-collapse my-navbar-left">
+                    <!--<div class="collapse" id="my-navbar-left"> -->
+                    <!--<div id="navbar-left">-->
+                    <ul class="nav navbar-nav">
+                        <li> <a href="/">Home</a></li>
+                        <li> <a href="/about">About Me</a></li>
+                        <li> <a href="/portfolio">Portfolio</a></li>
+                    </ul>
+                </div>
+                <a href="/" class="myLogo">
+                    <img src="images/NicoleLogo.jpg"/> <!--style="width: 250px; height: 301px;"/>-->
+                </a>
+                <div class="collapse navbar-collapse my-navbar-right">
+                    <!--<div class="collapse" id="my-navbar-right">-->
+                    <ul class="nav navbar-nav">
+                        <li> <a href="/pricing">Pricing</a></li>
+                        <li> <a href="/blog">Blog</a></li>
+                        <li> <a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
 
-   	</div>
 
-    <script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
-    {{{_sections.jquery}}}
+            <div class="collapse my-navbar-left-xs">
+                <ul class="nav navbar-nav">
+                    <li> <a href="/">Home</a></li>
+                    <li> <a href="/about">About Me</a></li>
+                    <li> <a href="/portfolio">Portfolio</a></li>
+                </ul>
+            </div>
+
+            <div class="collapse my-navbar-right-xs">
+                <ul class="nav navbar-nav">
+                    <li> <a href="/pricing">Pricing</a></li>
+                    <li> <a href="/blog">Blog</a></li>
+                    <li> <a href="/contact">Contact</a></li>
+                </ul>
+            </div>
+            
+        </div><!-- /.container-fluid -->
+    </nav>
+</header>
+
+<script src="js/main.js"></script>
+
+{{{body}}}
+    
 </body>
 </html>

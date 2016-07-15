@@ -1,0 +1,134 @@
+﻿body {
+  /* Uncomment this to enable scrolling and zooming
+  touch-action: manipulation;
+  */
+
+    font-family: "Open Sans", sans-serif;
+}
+
+.navbar {
+    margin-bottom: 0px;
+    background-color: white;
+}
+
+.navbar .navbar-nav>li>a {
+    /*color: red;*/
+}
+
+.left-dropdown {
+    float: left;
+}
+
+.my-navbar-left, .my-navbar-left-xs {
+    float: left;
+    width: 40%;
+    text-align: right;
+    text-transform: uppercase;
+    align-items: center;
+}
+
+.my-navbar-left > ul, .my-navbar-left-xs > ul {
+    float: right;
+    /*text-align: right;*/
+}
+
+.my-navbar-left-xs > ul {
+    text-align: center;
+}
+
+.my-navbar-left > ul > li, .my-navbar-left-xs > ul > li {
+    background-position: 100% .4em;
+    padding-right: .6em;
+}
+
+.my-navbar-right, .my-navbar-right-xs {
+    float: right;
+    width: 40%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/*.wrapper li + li {
+    content: " | ";
+}*/
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper img {
+    /*position: absolute; */
+    /*left: 80%;*/
+    width: 250px;
+    height: 250px;
+    /*clip: rect(0px, 250px, 301px, 0px);*/
+}
+
+/*Collapse the navbar when we go below 1024*/
+@media (max-width: 1023px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-left,.navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-fixed-top {
+		top: 0;
+		border-width: 0 0 1px;
+	}
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+		margin-top: 7.5px;
+	}
+	.navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in{
+  		display:block !important;
+	}
+    .my-navbar-left > ul {
+        float: none;
+        text-align: center;
+    }
+}
+
+/*xs: 0-767 sm: 768-991 md: 992-1199 lg: 1200px and up*/
+/*For extra small size: */
+
+/*767px and below: hide my-navbar-left and show my-navbar-left-xs*/
+/*@media(max-width: 767px) {
+    .my-navbar-left {
+        visibility: hidden;
+    }
+    .my-navbar-left-xs.collapsed {
+        visibility: visible;
+    }
+}*/
+
+/* 768 and above: hide the xs navbar*/
+/*@media(min-width: 768px) {
+        .my-navbar-left-xs {
+        visibility: hidden;
+    }
+}*/
+
+
+/*.my-navbar-left-xs {
+    display: none;
+}*/
